@@ -7,11 +7,7 @@ public class PaintCost {
 		 */
 		//insert scanner
 		
-	import java.util.Scanner;
-		
-		
-		Scanner in = new Scanner(System.in);
-	
+
 
 		int houseLengthFeet = 20;
 		double houseLengthInches = 6;
