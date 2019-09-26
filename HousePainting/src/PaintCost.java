@@ -84,8 +84,6 @@ public class PaintCost {
 		houseHeightFeet = houseHeightFeet + houseHeightInches/12;
 		double houseSquareFoot = 2*(houseLengthFeet * houseWidthFeet)+ 2*(houseLengthFeet * houseWidthFeet + .5*(houseLengthFeet * (houseHeightFeet - houseWidthFeet))); 
 		System.out.println("The amount in square feet to paint the house is " + houseSquareFoot);
-		double finalSqFtToPaint = (houseSquareFoot - tenWindowSquareFoot - twoDoorSquareFoot);
-		System.out.println("The final square feet to paint after taking out the windows and doors feet is " + finalSqFtToPaint);
 		double costToPaintHouse = (costPerSquareFoot * houseSquareFoot);
 		System.out.println("The cost to paint the house before subtracting the windows and doors cost are " + costToPaintHouse);
 		double costToPaintWindow = (costPerSquareFoot * tenWindowSquareFoot); 
