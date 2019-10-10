@@ -10,19 +10,23 @@ public class CarCostCalculation {
 		
 		String [] stuff = stickerHybrid.split(",");
 		
+		String [] hMake = stuff[0].split(":");
+		
+		String [] hModel = stuff[1].split(":");
+		
 		String [] cost = stuff[2].split(":");
-		System.out.println(cost[1]);
 		
 		String [] mpg = stuff[3].split(":");
-		System.out.println(mpg[1]);
 		
 		String [] stuff2 = stickerRegular.split(",");
 		
 		String [] cost2 = stuff2[2].split(":");
-		System.out.println(cost2[1]);
 		
 		String [] mpg2 = stuff2[3].split(":");
-		System.out.println(mpg2[1]);
+		
+		String [] rMake = stuff2[0].split(":");
+		
+		String [] rModel = stuff2[1].split(":");
 		
 		double hybridCost = Integer.parseInt(cost[1]);
 		
@@ -43,36 +47,36 @@ public class CarCostCalculation {
 		//Equations 
 		//1 year
 		double CostOwnRegularCar = ((MilesTraveledYear/regularMpg)*CostPerGallonGas+regularCost);
-		System.out.println("The cost to own a Toyota Corolla after one year is " + CostOwnRegularCar);
+		System.out.print("Cost to own a " + rMake[1] + " " + rModel[1] + " after year one: " + CostOwnRegularCar);
 		double CostOwnHybridCar = ((MilesTraveledYear/hybridMpg)*CostPerGallonGas+hybridCost);
-		System.out.println("The cost to own a Toyota Prius after one year is " + CostOwnHybridCar);
+		System.out.println(" for " + hMake[1] + " " + hModel[1] + " is: "  + CostOwnHybridCar);
 		
 		//2 years
 		double CostOwnRegularCar2 = CostOwnRegularCar + ((MilesTraveledYear/regularMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Corolla after two years is " + CostOwnRegularCar2);
+		System.out.print("Cost to own a " +rMake[1] + " " + rModel[1] + " after year two: " + CostOwnRegularCar2);
 		double CostOwnHybridCar2 = CostOwnHybridCar + ((MilesTraveledYear/hybridMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Prius after two years is " + CostOwnHybridCar2);
+		System.out.println(" for " +hMake[1] + " " + hModel[1] + " is: " + CostOwnHybridCar2);
 		//3 years
 		double CostOwnRegularCar3 = CostOwnRegularCar2 + ((MilesTraveledYear/regularMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Corolla after three years is " + CostOwnRegularCar3);
+		System.out.print("Cost to own a " + rMake[1] + " " +rModel[1] + " after year three: " + CostOwnRegularCar3);
 		double CostOwnHybridCar3 = CostOwnHybridCar2 + ((MilesTraveledYear/hybridMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Prius after three years is " + CostOwnHybridCar3);
+		System.out.println(" for " + hMake[1] + " " + hModel[1] + " is: " + CostOwnHybridCar3);
 		//4 years
 		double CostOwnRegularCar4 = CostOwnRegularCar3 + ((MilesTraveledYear/regularMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Corolla after four years is " + CostOwnRegularCar4);
+		System.out.print("Cost to own a " + rMake[1] + " " + rModel[1] + " after year four: " + CostOwnRegularCar4);
 		double CostOwnHybridCar4 = CostOwnHybridCar3 + ((MilesTraveledYear/hybridMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Prius after four years is " + CostOwnHybridCar4);
+		System.out.println(" for " + hMake[1] + " " + hModel[1] + " is: " + CostOwnHybridCar4);
 		//5 years
 		double CostOwnRegularCar5 = CostOwnRegularCar4 + ((MilesTraveledYear/regularMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Corolla after five years is " + CostOwnRegularCar5);
+		System.out.print("Cost to own a " + rMake[1] + " " + rModel[1] + " after year five: " + CostOwnRegularCar5);
 		double CostOwnHybridCar5 = CostOwnHybridCar4 + ((MilesTraveledYear/hybridMpg)*CostPerGallonGas);
-		System.out.println("The cost to own a Toyota Prius after five years is " + CostOwnHybridCar5);
+		System.out.println(" for " + hMake[1] + " " + hModel[1] + " is " + CostOwnHybridCar5);
 		
 		double CostHybridCar5y = 37250;
 		double CostRegularCar5y = 37375;
-		if (CostHybridCar5y>CostRegularCar5y) {System.out.println("Toyota Prius does not pay back after 5 years");}
-		else if (CostHybridCar5y<CostRegularCar5y) {System.out.println("Toyota Prius pays back after 5 years");}
-		else {System.out.println("Toyota Prius is equal to Toyota Corolla after 5 years");}
+		if (CostHybridCar5y>CostRegularCar5y) {System.out.println(hMake[1] + " " + hModel[1] + " does not pay back after 5 years");}
+		else if (CostHybridCar5y<CostRegularCar5y) {System.out.println(hMake[1] + " " + hModel[1] + " pays back after 5 years");}
+		else {System.out.println(hMake[1] + " " + hModel[1] + " is equal to " +rMake[1] + " " + rModel[1] + " after 5 years");}
 		
 
 	}
