@@ -9,9 +9,9 @@
 		Scanner in = new Scanner(System.in);
 		
 		{
-		String grade;
+		String grade = "";
 		double loop = 0;
-		double numericValue = 5;
+		double numericValue = 0;
 		
 		while (loop == 0) {
 			System.out.println("Enter a letter grade or 'Q' to quit the program: ");
@@ -72,14 +72,10 @@
 		numericValue = 0.0;
 		}
 		System.out.println("The numeric value is " + numericValue);
+	}
+	
+    
+	}
 		
-		}
-	}
-    
-	
-	
-	
-	
-    
-	}
 }
+	}
