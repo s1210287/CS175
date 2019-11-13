@@ -29,17 +29,17 @@ public class GroceryDiscount {
 				double discount = .08;
 				System.out.println("You win a discount coupon of: " + formatter.format(moneySpent*discount) + ".(" + "8% of your purchase)");
 			}
-			else if (moneySpent <= 150)
+			else if (moneySpent <= 150.0)
 			{
 				double discount = .10;
 				System.out.println("You win a discount coupon of: " + formatter.format(moneySpent*discount)+ ".(" + "10% of your purchase)");  
 			}
-			else if (moneySpent <= 210)
+			else if (moneySpent <= 210.0)
 			{
 				double discount = .12;
 				System.out.println("You win a discount coupon of: " + formatter.format(moneySpent*discount) + ".(" + "12% of your purchase)");
 			}
-			else if (210 < moneySpent)
+			else if (210.0 < moneySpent)
 			{
 				double discount = .14;
 				System.out.println("You win a discount coupon of: " + formatter.format(moneySpent*discount) + ".(" + "14% of your purchase)");
