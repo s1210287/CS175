@@ -18,6 +18,7 @@ public class BankAccount {
 		      Constructs a bank account with a zero balance. A constructor is a type of 'method' this code is used when an new object,
 		      is created(instantiated). Note that the constructors have the same name as the class 'BankAccount'
 		   */
+		  
 		   public BankAccount()
 		   {   
 		      balance = 0;
@@ -44,7 +45,9 @@ public class BankAccount {
 		   */
 		   public void deposit(double amount)
 		   {  
-		      balance = balance + amount;
+			     
+			 balance = balance + amount;
+				
 		   }
 
 		   /**
@@ -56,7 +59,10 @@ public class BankAccount {
 		   */
 		   public void withdraw(double amount)
 		   {   
-			   balance = balance - amount;
+			  if(amount<=balance)
+					 balance = balance - amount;
+			  else
+					 System.out.println("Can't withdraw. The amount exceeds balance");
 		   }
 
 		   /**
