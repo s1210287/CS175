@@ -62,7 +62,7 @@ public class BankAccount {
 			  if(amount<=balance)
 					 balance = balance - amount;
 			  else
-					 System.out.println("Can't withdraw. The amount exceeds balance");
+					 System.out.println("Can't withdraw" + " " + amount + "," + " the amount exceeds balance " +balance);
 		   }
 
 		   /**
